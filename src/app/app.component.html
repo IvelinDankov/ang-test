@@ -1,4 +1,11 @@
 <div>
-  <h1>Hello Angular {{ title }}</h1>
-  <button (click)="handleClick()">Change Title!</button>
+  <h1>Welcome to Angular {{ title }}</h1>
+  <button (click)="changeTitle()">Change Title</button>
+</div>
+<app-user-list [users]="userList" />
+
+<div class="form">
+  <input type="text" name="" id="" placeholder="User name" #inputName />
+  <input type="number" name="" id="" placeholder="User age" #inputAge />
+  <button (click)="addUser(inputName, inputAge)" class="btn">add user</button>
 </div>
